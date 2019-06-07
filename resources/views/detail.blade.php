@@ -5,10 +5,15 @@
 <meta property="og:title" content="{{$multimedia->title}}" />
 <meta property="og:type" content="music.song" />
 <meta property="og:url" content="{{ $multimedia->currentUrl }}" />
-<meta property="og:image" content="{{asset('custom/logo.png')}}" />
+<meta property="og:image" content="{{asset('custom/facebook.png')}}" />
 <meta property="og:site_name" content="DDNA Multimedia" />
 <meta property="fb:app_id" content="1269114079909543" />
 <meta property="og:description" content="{{$multimedia->description}}">
+<meta property="og:audio" content="{{$multimedia->media_url}}">
+<meta property="og:audio:type" content="audio/vnd.facebook.bridge">
+
+
+
 
 @endsection
 
