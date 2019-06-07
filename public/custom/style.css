@@ -1,0 +1,109 @@
+.audioSection {
+   
+}
+
+body {
+    min-height: 100vh;
+    background: rgba(33,64,123,1);
+    background: -moz-linear-gradient(-45deg, rgba(33,64,123,1) 0%, rgba(160,80,124,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(33,64,123,1)), color-stop(100%, rgba(160,80,124,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(33,64,123,1) 0%, rgba(160,80,124,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(33,64,123,1) 0%, rgba(160,80,124,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(33,64,123,1) 0%, rgba(160,80,124,1) 100%);
+    background: linear-gradient(135deg, rgba(33,64,123,1) 0%, rgba(160,80,124,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#21407b', endColorstr='#a0507c', GradientType=1 );
+}
+@media all and (min-width: 960px) {
+    .audioSection {
+        padding-top: 100px;
+    }
+    #waveform {
+        padding-top: 40px;
+    }
+    .right {
+        margin-left: -30px;
+    }
+}
+
+@media all and (max-width: 960px) {
+    .audioSection {
+        padding-top: 50px;
+    }
+    .imageContainer {
+        margin-top: 25px;
+    }
+}
+
+
+.player {
+    position: relative;
+}
+
+.controls {
+    left: 10px;
+    top: 10px;
+}
+
+.control {
+    border-radius: 50%;
+    background: #e55e0d;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.control:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.control img {
+    width: 40px;
+}
+
+.audioDetails h3 {
+    background: #4a4a4a;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+}
+
+.imageContainer {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+
+
+.ftco-navbar-light .navbar-nav > .nav-item.cta > a {
+    background: #e55e0d;
+    border: 1px solid #e55e0d
+}
+
+.audioData .col-md-8 {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    padding: 20px;
+}
+.player .col-md-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.timer {
+    padding: 5px;
+    background: #e55e0d;
+    color: white;
+    margin-top: 10px;
+    width: 100px;
+    text-align: center;
+}
