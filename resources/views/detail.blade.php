@@ -73,7 +73,8 @@
       container: '#waveform',
       waveColor: '#dca509',
       progressColor: '#e55e0d',
-      pixelRatio: 1
+      pixelRatio: 1,
+      backend: 'MediaElement',
   });
 
   function fancyTimeFormat(time)
@@ -98,19 +99,16 @@
 
 
 $("#timer").hide();
-
-
-
   wavesurfer.load("{{$multimedia->media_url}}");
-
   wavesurfer.on('ready', function () {
     $("#timer").show();
     var totalTime = wavesurfer.getDuration();
     document.getElementById('remaining').innerText = fancyTimeFormat(totalTime.toFixed(0));
     $("#waveform").show();
     $("#loader").hide();
-    console.log(wavesurfer);
-    $( "#playerButton" ).click(function() {
+  });
+
+  $( "#playerButton" ).click(function() {
       if(!playing){
         wavesurfer.play();
         playing = true;
@@ -121,7 +119,6 @@ $("#timer").hide();
         $(this).children().children().attr("src", "{{asset('custom/play.png')}}");
       }
     });
-  });
 
 wavesurfer.on('audioprocess', function() {
     if(wavesurfer.isPlaying()) {
