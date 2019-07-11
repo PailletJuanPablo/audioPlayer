@@ -49,7 +49,8 @@ class HomeController extends Controller
         $multimedia->fill($request->all());
         $multimedia->media_url = $path;
         $multimedia->save();
-        return $multimedia;
+        return redirect()->route('multimedia', ['id' => $multimedia->id]);
+
     }
 
 
